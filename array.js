@@ -77,13 +77,44 @@ var fruits = ["Banana", "Orange", "Apple", "Mango"];
  
 
 //9. slice
+// The slice() method returns the selected elements in an array, as a new array object.
+
+// The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3); //start index start from 0 so 1 means start from 1st index
+
+// start	Optional. An integer that specifies where to start the selection (The first element has an index of 0). Use negative numbers to select from the end of an array. If omitted, it acts like "0"
+// end	Optional. An integer that specifies where to end the selection. If omitted, all elements from the start position and to the end of the array will be selected. Use negative numbers to select from the end of an array
+
+
 
 
 
 //10. splice
+// The splice() method adds/removes items to/from an array, and returns the removed item(s).
+
+//array.splice(index, howmany, item1, ....., itemX)
+
+// index	Required. An integer that specifies at what position to add/remove items, Use negative values to specify the position from the end of the array
+// howmany	Optional. The number of items to be removed. If set to 0, no items will be removed
+// item1, ..., itemX	Optional. The new item(s) to be added to the array// Note: This method changes the original array.
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+//output -> Banana,Orange,Lemon,Kiwi,Apple,Mango
 
 
 
 
 
 
+//find unique values
+let intersection = arrA.filter(x => arrB.includes(x));
+
+//different values
+let difference = arrA.filter(x => !arrB.includes(x));
+
+
+// union 
+let union = [...arrA, ...arrB];
